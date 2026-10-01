@@ -1,0 +1,20 @@
+LOG DATA CLEANING - STUDENT MONITORING
+========================================
+Data mentah : 15000 baris x 9 kolom
+Missing value: 0
+Baris duplikat: 0
+Duplikat Student_ID+Tanggal: 0
+Kategori kehadiran (mentah): ['Absent', 'Late', 'Present']
+Kategori risiko (mentah)   : ['High', 'Low', 'Medium']
+Outlier (IQR 1.5x) per variabel numerik:
+  - Stres_GSR: min=0.5, max=5.0, outlier=0
+  - Jam_Tidur: min=5.0, max=9.0, outlier=0
+  - Kecemasan: min=1.0, max=10.0, outlier=0
+  - Mood: min=1.0, max=10.0, outlier=0
+
+Data bersih : 15000 baris x 14 kolom
+Baris dibuang: 0
+
+Kolom turunan:
+  Jam_Mulai, Jam_Selesai, Durasi_Jam (dari Jam_Kelas), Hari (dari Tanggal),
+  Kategori_Stres (Rendah <2, Sedang 2-3,49, Tinggi >=3,5)
